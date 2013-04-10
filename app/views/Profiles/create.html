@@ -1,0 +1,29 @@
+#{extends 'main.html' /}
+#{form @Profiles.save(), class:"profile-details"}
+    <div class="profile-details">
+        <div>
+            <label for="firstName" >First Name</label>
+            <input id="firstName" name="profile.firstName" type="text" value="${flash['profile.firstName']}">
+            #{ifError 'profile.firstName'}
+                <div class="error">#{error 'profile.firstName' /}</div>
+            #{/ifError}
+        </div>
+        <div>
+            <label for="lastName">Last Name</label>
+            <input id="lastName" name="profile.lastName"  type="text" value="${flash['profile.lastName']}">
+            #{ifError 'profile.lastName'}
+                <div class="error">#{error 'profile.lastName' /}</div>
+            #{/ifError}
+        </div>
+        <div>
+            <label for="summary">Summary</label>
+            <textarea id="summary" name="profile.summary">${flash['profile.summary']}</textarea>
+        </div>
+        <div>
+            <label for="experience" >Experience</label>
+            <textarea id="experience" name="profile.experience" >${flash['profile.experience']}</textarea>
+        </div>
+        <input type="submit" value="Save" />
+    </div>
+#{/form}
+

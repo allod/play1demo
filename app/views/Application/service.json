@@ -1,0 +1,12 @@
+{
+"persons" : [
+    #{list items:profiles, as:'profile'}
+    {
+        "person" : {
+            "firstName" : "${profile.firstName}",
+            "lastName" : "${profile.lastName}"
+        }
+    } ${profile_isLast ? '' : ','}
+    #{/list}
+]
+}

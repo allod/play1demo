@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persons>
+#{list items:profiles, as:'profile'}
+    <person>
+        <firstName>${profile.firstName}</firstName>
+        <lastName>${profile.lastName}</lastName>
+    </person>
+#{/list}
+</persons>

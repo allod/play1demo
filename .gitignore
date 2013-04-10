@@ -4,3 +4,8 @@
 *.jar
 *.war
 *.ear
+*.iml
+*.iws
+*.ipr
+tmp/*
+logs/*

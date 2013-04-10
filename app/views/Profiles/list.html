@@ -1,0 +1,18 @@
+#{extends 'main.html' /}
+
+<h1>List of ${profiles.size} profiles</h1>
+
+#{ifnot profiles.isEmpty()}
+    <ul>
+        #{list items:profiles, as:'profile'}
+            <li><a href="@{Profiles.view(profile.id)}">${profile.firstName} ${profile.lastName}</a></li>
+        #{/list}
+    </ul>
+#{/ifnot}
+#{else}
+    <div>
+        <em>Nothing to display</em>
+    </div>
+#{/else}
+
+#{cool /}
